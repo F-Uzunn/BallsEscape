@@ -60,4 +60,9 @@ public class UIManager : InstanceManager<UIManager>
         EventManager.Broadcast(GameEvent.OnNewLevel);
         SaveManager.SaveData(gameData);
     }
+
+    public void RestartButton()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
 }
